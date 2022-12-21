@@ -6,20 +6,21 @@ def choose_action():
     return request
 
 def new_contact():
-    name = input("Введите имя: ")
+    name = input("Введите имя и фамилию: ")
     tel = input("Введите номер: ")
-    email = input("Введите должность: ")
-    job_role = input("Введите email: ")
+    job_role = input("Введите должность: ")
+    email = input("Введите email: ")
+    
     id = str(uuid.uuid4()).split('-')[0]
-    # id= id_old[0] 
-    return f'{id} || {name} || {tel} || {job_role} || {email}'
+    # return f'{id} || {name} || {tel} || {job_role} || {email}'
+    return f'{id};{name};{tel};{job_role};{email}'
 
 def show_found(result):
     print(f'Результат поиска: {result}')
 
 
-def deleted_contact(result):
-    print(f'Пользователь: {result} удален')
+def deleted_contact():
+    print(f'Пользователь удален')
 
 
 def action_for_change():
