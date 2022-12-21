@@ -12,7 +12,6 @@ def new_contact():
     email = input("Введите email: ")
     
     id = str(uuid.uuid4()).split('-')[0]
-    # return f'{id} || {name} || {tel} || {job_role} || {email}'
     return f'{id};{name};{tel};{job_role};{email}'
 
 def show_found(result):
